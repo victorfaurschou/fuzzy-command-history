@@ -1,9 +1,13 @@
-# fuzzy-command-history
+# Fuzzy Command History
 
-## Setup
+**Adds fuzzy search to chat command history.**
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+## 🔗 Dependencies
 
-## License
+### Required
+- [Fabric Loader](https://fabricmc.net/use/)
+- [Fabric API](https://modrinth.com/mod/fabric-api)
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## 🏷️ Tags
+
+`minecraft, mod, fabric, quality of life (QoL), chat, command history, fuzzy search, fzf`
