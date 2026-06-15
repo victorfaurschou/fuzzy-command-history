@@ -14,7 +14,8 @@
 	"icon": "assets/fuzzy-command-history/icon.png",
 	"environment": "client",
 	"entrypoints": {
-		"client": ["com.victorfaurschou.fuzzycommandhistory.client.FuzzyCommandHistoryClient"]
+		"client": ["com.victorfaurschou.fuzzycommandhistory.client.FuzzyCommandHistoryClient"],
+		"modmenu": ["com.victorfaurschou.fuzzycommandhistory.client.ModMenuIntegration"]
 	},
 	"mixins": [
 		{"config": "fuzzy-command-history.client.mixins.json", "environment": "client"}
@@ -24,5 +25,9 @@
 		"minecraft": "~26.1",
 		"java": ">=25",
 		"fabric-api": ">=0.119.2"
+	},
+	"suggests": {
+		"modmenu": "*",
+		"cloth-config": "*"
 	}
 }
