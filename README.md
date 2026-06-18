@@ -6,7 +6,7 @@ Available on [Modrinth](https://modrinth.com/mod/fuzzy-command-history) and [Cur
 
 ## 📖 Features
 
-- Search your command history to quickly find any previously used command.
+- Search your command history to quickly find any previously used command - inspired by fzf.
 - Space-separated words each narrow the results independently
 - Configurable via Mod Menu
 
