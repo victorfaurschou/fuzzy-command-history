@@ -13,13 +13,14 @@ jobs:
     permissions:
       contents: write
       actions: read
-    uses: victorfaurschou/minecraft-mod-workflows/.github/workflows/release.yml@main
+    uses: victorfaurschou/minecraft-modding-workflows/.github/workflows/release.yml@main
     with:
       mod_name: fuzzy-command-history
       build_run_id: ${{ github.event.workflow_run.id }}
       build_sha: ${{ github.event.workflow_run.head_sha }}
       build_branch: ${{ github.event.workflow_run.head_branch }}
       build_event: ${{ github.event.workflow_run.event }}
+      modrinth_environment: client_only
       modrinth_dependencies: >-
         [{"project_id":"P7dR8mSH","dependency_type":"required"},
         {"project_id":"9s6osm5g","dependency_type":"required"},
