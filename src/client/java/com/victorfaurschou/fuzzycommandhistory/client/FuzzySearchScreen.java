@@ -142,6 +142,7 @@ public class FuzzySearchScreen extends Screen {
     private void confirmSelection(boolean execute) {
         String selected = filtered.isEmpty() ? searchBox.getValue() : filtered.get(selectedIndex);
         if (execute && minecraft.player != null) {
+            minecraft.gui.hud.getChat().addRecentChat(selected);
             minecraft.gui.setScreen(null);
             if (selected.startsWith("/")) {
                 minecraft.player.connection.sendCommand(selected.substring(1));
