@@ -2,6 +2,7 @@ package com.victorfaurschou.fuzzycommandhistory.client;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.client.CommandHistory;
 import net.minecraft.client.Minecraft;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -67,7 +68,7 @@ public class FuzzyHistory {
             // first run: seed from vanilla commandHistory
             Minecraft mc = Minecraft.getInstance();
             if (mc != null) {
-                Collection<String> vanilla = mc.commandHistory().history();
+                Collection<String> vanilla = new CommandHistory(mc.gameDirectory.toPath()).history();
                 for (String cmd : vanilla) {
                     if (!cmd.isBlank()) commands.addLast(cmd);
                 }

@@ -28,8 +28,8 @@ public class FuzzyCommandHistoryClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(mc -> {
             while (openKey.consumeClick()) {
-                if (mc.screen == null && mc.getOverlay() == null) {
-                    mc.setScreen(new FuzzySearchScreen("", true));
+                if (mc.gui.screen() == null && mc.gui.overlay() == null) {
+                    mc.gui.setScreen(new FuzzySearchScreen("", true));
                 }
             }
         });
