@@ -32,6 +32,11 @@ public class FuzzyHistory {
         return INSTANCE;
     }
 
+    public void clear() {
+        commands.clear();
+        save();
+    }
+
     public void add(String command) {
         if (command.isBlank()) return;
         commands.remove(command);
