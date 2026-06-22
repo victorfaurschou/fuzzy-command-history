@@ -24,6 +24,24 @@ Available on [Modrinth](https://modrinth.com/mod/fuzzy-command-history) and [Cur
 1. Each space-separated word must appear somewhere in the result
 2. For example, `give oak boat` will match `/give Player minecraft:oak_boat` but not `/give Player minecraft:acacia_boat`
 
+## 💡 Examples
+
+[![browsing-command-history](https://raw.githubusercontent.com/victorfaurschou/fuzzy-command-history/26.2/.github/examples/browsing-command-history.gif)](https://raw.githubusercontent.com/victorfaurschou/fuzzy-command-history/26.2/.github/examples/browsing-command-history.gif)
+
+*Browsing command history*
+
+[![looking-up-boats-specific-to-player1](https://raw.githubusercontent.com/victorfaurschou/fuzzy-command-history/26.2/.github/examples/looking-up-boats-specific-to-player1.gif)](https://raw.githubusercontent.com/victorfaurschou/fuzzy-command-history/26.2/.github/examples/looking-up-boats-specific-to-player1.gif)
+
+*Looking up boats specific to player1*
+
+[![looking-up-oak-things](https://raw.githubusercontent.com/victorfaurschou/fuzzy-command-history/26.2/.github/examples/looking-up-oak-things.gif)](https://raw.githubusercontent.com/victorfaurschou/fuzzy-command-history/26.2/.github/examples/looking-up-oak-things.gif)
+
+*Looking up oak things*
+
+[![looking-up-previous-teleports](https://raw.githubusercontent.com/victorfaurschou/fuzzy-command-history/26.2/.github/examples/looking-up-previous-teleports.gif)](https://raw.githubusercontent.com/victorfaurschou/fuzzy-command-history/26.2/.github/examples/looking-up-previous-teleports.gif)
+
+*Looking up previous teleports*
+
 ## 🔗 Dependencies
 
 ### Required
