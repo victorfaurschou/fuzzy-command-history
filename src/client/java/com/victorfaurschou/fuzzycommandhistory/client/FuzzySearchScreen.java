@@ -126,12 +126,23 @@ public class FuzzySearchScreen extends Screen {
             selectedIndex = Math.min(filtered.size() - 1, selectedIndex + 1);
             return true;
         }
+        if (event.isCycleFocus()) {
+            if (!filtered.isEmpty()) {
+                if (event.hasShiftDown()) {
+                    selectedIndex = Math.max(0, selectedIndex - 1);
+                } else {
+                    selectedIndex = Math.min(filtered.size() - 1, selectedIndex + 1);
+                }
+            }
+            return true;
+        }
         return super.keyPressed(event);
     }
 
     private void confirmSelection(boolean execute) {
         String selected = filtered.isEmpty() ? searchBox.getValue() : filtered.get(selectedIndex);
         if (execute && minecraft.player != null) {
+            minecraft.gui.getChat().addRecentChat(selected);
             minecraft.setScreen(null);
             if (selected.startsWith("/")) {
                 minecraft.player.connection.sendCommand(selected.substring(1));
