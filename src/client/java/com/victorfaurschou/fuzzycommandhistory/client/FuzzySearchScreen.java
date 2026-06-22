@@ -126,6 +126,16 @@ public class FuzzySearchScreen extends Screen {
             selectedIndex = Math.min(filtered.size() - 1, selectedIndex + 1);
             return true;
         }
+        if (event.isCycleFocus()) {
+            if (!filtered.isEmpty()) {
+                if (event.hasShiftDown()) {
+                    selectedIndex = Math.max(0, selectedIndex - 1);
+                } else {
+                    selectedIndex = Math.min(filtered.size() - 1, selectedIndex + 1);
+                }
+            }
+            return true;
+        }
         return super.keyPressed(event);
     }
 
