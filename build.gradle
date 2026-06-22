@@ -36,13 +36,13 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-	compileOnly "com.terraformersmc:modmenu:18.0.0-alpha.8"
-	runtimeOnly "com.terraformersmc:modmenu:18.0.0-alpha.8"
+	compileOnly "com.terraformersmc:modmenu:20.0.0-beta.3"
+	runtimeOnly "com.terraformersmc:modmenu:20.0.0-beta.3"
 
-	compileOnly("me.shedaniel.cloth:cloth-config-fabric:26.1.154") {
+	compileOnly("me.shedaniel.cloth:cloth-config-fabric:26.2.155") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
-	runtimeOnly("me.shedaniel.cloth:cloth-config-fabric:26.1.154") {
+	runtimeOnly("me.shedaniel.cloth:cloth-config-fabric:26.2.155") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 }

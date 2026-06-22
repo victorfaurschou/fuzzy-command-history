@@ -38,7 +38,7 @@ public class FuzzySearchScreen extends Screen {
 
     @Override
     protected void init() {
-        minecraft.gui.getChat().discardDraft();
+        minecraft.gui.hud.getChat().discardDraft();
         allHistory = FuzzyHistory.getInstance().getHistory();
         updateFilter(previousInput);
 
@@ -107,9 +107,9 @@ public class FuzzySearchScreen extends Screen {
     public boolean keyPressed(KeyEvent event) {
         if (event.isEscape()) {
             if (openedFromGame) {
-                minecraft.setScreen(null);
+                minecraft.gui.setScreen(null);
             } else {
-                minecraft.setScreen(new ChatScreen(searchBox.getValue(), false));
+                minecraft.gui.setScreen(new ChatScreen(searchBox.getValue(), false));
             }
             return true;
         }
@@ -132,14 +132,14 @@ public class FuzzySearchScreen extends Screen {
     private void confirmSelection(boolean execute) {
         String selected = filtered.isEmpty() ? searchBox.getValue() : filtered.get(selectedIndex);
         if (execute && minecraft.player != null) {
-            minecraft.setScreen(null);
+            minecraft.gui.setScreen(null);
             if (selected.startsWith("/")) {
                 minecraft.player.connection.sendCommand(selected.substring(1));
             } else {
                 minecraft.player.connection.sendChat(selected);
             }
         } else {
-            minecraft.setScreen(new ChatScreen(selected, false));
+            minecraft.gui.setScreen(new ChatScreen(selected, false));
         }
     }
 
