@@ -206,7 +206,7 @@ public class FuzzySearchScreen extends Screen {
                 int normalColor = selected ? 0xFFFFFFFF : 0xFFAAAAAA;
                 int matchColor  = 0xFF000000 | cfg.highlightColor;
                 String entry = filtered.get(i);
-                Set<Integer> matched = (selected || matchedIndicesCache.isEmpty())
+                Set<Integer> matched = matchedIndicesCache.isEmpty()
                         ? Set.of()
                         : matchedIndicesCache.get(i);
                 if (matched.isEmpty()) {
